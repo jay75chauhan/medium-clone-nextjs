@@ -3,14 +3,17 @@ import React from "react";
 
 function Header() {
   return (
-    <header className="flex shadow-md justify-between py-4 px-6 lg:px-16 bg-transparent backdrop-blur-3xl">
+    <header
+      className="flex w-full sticky top-0 z-30 shadow-md backdrop-filter: ;
+     justify-between py-4 px-6 lg:px-16  backdrop-blur-3xl"
+    >
       <div className="flex items-center  space-x-3">
         <Link href="/">
           <img className="w-16 cursor-pointer" src="/logo.png" />
         </Link>
         <h1 className="text-5xl font-bold">Blog</h1>
 
-        <div className="hidden md:flex items-center p-3 space-x-6">
+        <div className="hidden md:flex items-center p-3 px-10 space-x-6">
           <h3 className="font-semibold text-xl">About</h3>
           <h3 className="font-semibold text-xl">Contact</h3>
           <h3 className="text-white font-semibold text-xl shadow-2xl cursor-pointer bg-black px-4 py-1 rounded-full">
