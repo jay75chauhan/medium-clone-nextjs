@@ -2,9 +2,9 @@ import React from "react";
 
 function Baner() {
   return (
-    <div className="flex justify-between rounded-b-md shadow  lg:px-5 items-center  bg-slate-500 py-10 lg:py-3 ">
-      <div className="px-10 space-y-5 ">
-        <h1 className="text-6xl max-w-xl font-serif">
+    <div className="flex justify-between    lg:px-5 items-center   bg-transparent backdrop-blur-xl shadow-xl md:py-10 py-5 lg:py-3 ">
+      <div className="md:px-10 px-5 md:space-y-5 space-y-3 ">
+        <h1 className="md:text-6xl text-4xl max-w-xl font-serif">
           <span className="underline decoration-black decoration-4">
             M Blog
           </span>{" "}

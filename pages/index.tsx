@@ -11,24 +11,24 @@ interface Props {
 
 export default function Home({ posts }: Props) {
   return (
-    <div className="bg-gray-50 h-screen overflow-y-scroll ">
+    <div className="bg-gradient-to-t  to-slate-300 from-slate-500 h-screen overflow-y-scroll ">
       <Head>
         <title>M Blog</title>
         <link rel="icon" href="/logo.png" />
       </Head>
       <Header />
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl  mx-auto">
         <Baner />
 
         <div className="grid grid-cols-1 mt-10 md:mt-3 mx-3  md:mx-0 rounded-2xl sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 p-4 lg:p-0">
           {posts.map((post) => (
             <Link key={post._id} href={`/post/${post.slug.current}`}>
-              <div className="group my-4   cursor-pointer  rounded-lg shadow-2xl overflow-hidden">
+              <div className="group my-2   cursor-pointer  rounded-lg shadow-2xl overflow-hidden">
                 <img
-                  className="h-60 w-full object-cover group-hover:scale-105 transition-transform duration-200 ease-in-out"
+                  className="md:h-60 h-48  w-full object-cover group-hover:scale-105 transition-transform duration-200 ease-in-out"
                   src={urlFor(post.mainImage).url()!}
                 />
-                <div className="flex justify-between py-3 px-6 bg-white">
+                <div className="flex justify-between py-4 px-5 bg-slate-300">
                   <div>
                     <p className="text-lg font-bold">{post.title}</p>
                     <p className="text-sm">

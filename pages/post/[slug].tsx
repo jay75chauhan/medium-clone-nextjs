@@ -11,7 +11,7 @@ interface Props {
 }
 
 function Post({ post }: Props) {
-  const [submitted, setSubmitted] = useState<boolean>(true);
+  const [submitted, setSubmitted] = useState<boolean>(false);
   const {
     register,
     handleSubmit,
@@ -42,18 +42,16 @@ function Post({ post }: Props) {
         className="w-full -mt-32 h-80 object-cover"
         src={urlFor(post.mainImage).url()!}
       />
-      <div className="p-8 md:max-w-5xl mx-5  backdrop-blur-lg   md:mx-auto  rounded-xl shadow-xl">
+      <div className="px-8 py-4 mt-10 md:max-w-5xl mx-5  backdrop-filter backdrop-blur-3xl bg-gradient-to-t  to-slate-300 from-slate-500   md:mx-auto  rounded-xl shadow">
         <article className=" ">
           <h1 className="text-5xl font-semibold mt-10 mb-3">{post.title}</h1>
-          <h2 className="text-xl font-light text-gray-900">
-            {post.description}
-          </h2>
+          <h2 className="text-xl font-normal">{post.description}</h2>
           <div className="flex items-center py-3 space-x-2">
             <img
               src={urlFor(post.author.image).url()!}
               className="h-10 w-10 rounded-full"
             />
-            <p className="font-extralight text-sm">
+            <p className="font-normal text-black text-sm">
               Blog post by <span className="underline">{post.author.name}</span>{" "}
               - Published at {new Date(post._createdAt).toLocaleString()}
             </p>
